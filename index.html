@@ -347,7 +347,7 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-10 col-lg-offset-1">
                         <div class="modal-body">
                             <h2>Flowergraphy</h2>
                             <h4>Flower Classification System Based on Deep Learning</h4>
@@ -389,7 +389,7 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-10 col-lg-offset-1">
                         <div class="modal-body">
                             <h2>FunJob</h2>
                             <h4>Career Planning Assistant Based on Big Data Sample</h4>
@@ -431,22 +431,80 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-10 col-lg-offset-1">
                         <div class="modal-body">
                             <h2>Sitting Posture Detection System </h2>
                             <h4>Detection and Alerting System of Sitting Posture Based on 3D Body Sensing Camera</h4>
                             <hr class="star-primary">
+                            <p class = "project-intro">Sitting posture detection is helpful for preventing musculoskeletal disorders.
+                                With the development of motion-sensing camera and relative software development kit(SDK),
+                                it is possible to implement an application using skeleton detecting technology.
+                                In this project, we excoriated Skeleton thinning algorithm and Averaging process to detect sitting posture from a lateral view without disturbing the user.
+                                The results show this method has high accuracy when detecting improper sitting postures.</p>
+                            <p class = "project-intro"> This detecting improper sitting posture method is based on:
+                                <ul>
+                                    <li class = "project-intro">A motion-sensing camera</li>
+                                    <li class = "project-intro">Software development kit - OpenNI and NiTE</li>
+                                    <li class = "project-intro">Portable Ergonomic Observation(PEO) model</li>
+                                </ul>
+                            </p>
+                            <hr class="star-primary">
+                            <p class="project-h3-title"><b>Contribution</b></p>
+                            <p class = "project-intro">
+                            <ul>
+                                <li class = "project-intro">Detect from the lateral side of the user</li>
+                                <li class = "project-intro">Use a skeleton thinning algorithm</li>
+                                <li class = "project-intro">Apply a threshold to distinguish the posture</li>
+                            </ul>
+                            </p>
+                            <hr class="star-primary">
+                            <p class="project-h3-title"><b>Skeleton thinning algorithm</b></p>
+                            <p class="project-intro">
+                                Steps of reducing area of body to a consecutive curve:<br/>
+                                1. Check all of the pixels in each frame row by row;<br/>
+                                2. Mark middle pixels of each row;<br/>
+                                3. Calculate the related middle pixel according to previous row;<br/>
+                                4. Mark all related middle pixels and get the result.<br/>
+                            </p>
+                            <br/>
+                            <p class="project-intro">
+                                Picture a shows the flow chart of the skeleton thinning algorithm<br/>
+                                Purpose: Reduce the area of body to a consecutive curve<br/>
+                                Picture b shows the flow chart of the averaging process<br/>
+                                Purpose: Locate the position of head and neck<br/>
+                            </p>
+                            <br/>
+                            <p class="project-intro"><b>Example of the Skeleton thinning algorithm</b></p>
+                            <p class="project-intro">
+                                1. Mark the body pixels as green color, like c;<br/>
+                                2. Mark middle pixels as blue triangles, like d;<br/>
+                                3. Calculate and mark related middle pixels as orange triangles, like d;<br/>
+                                4. Connect all orange triangles to get a consecutive curve like e.<br/>
+                            </p>
+                            <p class="project-intro">
+                                Picture f shows the 4 basic steps of sitting posture detection.
+                            </p>
+                            <p class="project-intro">
+                                Picture h shows the trends of raw depth and depth after averaging process.<br/>
+                                Picture I shows the trends of raw depth difference and depth difference after the averaging process.<br/>
+                                And we can see that there is no abrupt change in raw depth difference. The abrupt change happens in the 53th-68th pixel, where the depth is less than -40. Combining with observation, -60 is chosen as an abrupt change, which means the 57th pixel is approximate neck.
+                            </p>
+                            <p class="project-intro">
+                                Then choose the middlepoint between neck and the first pixel on the consecutive curve to identify the position of head. The midpoint is also on the curve.
+                                The number of pixels skipped and averaged is based on the distance between camera and user and the effect of detection.
+                                Thus the first 20 pixels are skipped.
+                            </p>
+                            <p class="project-intro">
+                                In order to find whether factors like body shape and clothes affect the accuracy of the detection,
+                                five volunteers repeated making improper sitting posture for 50 times, the results are shown in table j.
+                            </p>
                             <img class="img-fluid img-centered img-rounded" src="images/portfolio/Posture_Detection/Posture_Detection1.png" alt="">
                             <img class="img-fluid img-centered img-rounded" src="images/portfolio/Posture_Detection/Posture_Detection2.png" alt="">
                             <img class="img-fluid img-centered img-rounded" src="images/portfolio/Posture_Detection/Posture_Detection3.png" alt="">
                             <img class="img-fluid img-centered img-rounded" src="images/portfolio/Posture_Detection/Posture_Detection4.png" alt="">
                             <img class="img-fluid img-centered img-rounded" src="images/portfolio/Posture_Detection/Posture_Detection5.png" alt="">
                             <img class="img-fluid img-centered img-rounded" src="images/portfolio/Posture_Detection/career_assistant6.png" alt="">
-                            <p>Sitting posture detection is helpful for preventing musculoskeletal disorders.
-                                With the development of motion-sensing camera and relative software development kit(SDK),
-                                it is possible to implement an application using skeleton detecting technology.
-                                In this project, we excoriated Skeleton thinning algorithm and Averaging process to detect sitting posture from a lateral view without disturbing the user.
-                                The results show this method has high accuracy when detecting improper sitting postures.
+
                             <ul class="list-inline item-details">
                                 <li>
                                     <strong>
@@ -481,7 +539,7 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-10 col-lg-offset-1">
                         <div class="modal-body">
                             <h2>BookAholic </h2>
                             <h4>B2C Online Bookstore</h4>
@@ -523,7 +581,7 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-10 col-lg-offset-1">
                         <div class="modal-body">
                             <h2>Vapor </h2>
                             <h4>Online Game Platform</h4>
@@ -564,7 +622,7 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-10 col-lg-offset-1">
                         <div class="modal-body">
                             <h2>Online Customer Service System</h2>
                             <h4> Online Customer Service System for Chinese Southern Airlines  </h4>
