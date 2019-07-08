@@ -110,6 +110,7 @@ p {
     line-height: 1.4;
     letter-spacing: 0.2px;
     text-align: left;
+    padding: 2px 0;
 }
 
 .project-intro-title{
